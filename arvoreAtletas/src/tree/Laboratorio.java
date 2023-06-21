@@ -7,6 +7,7 @@ public class Laboratorio {
 
 	public static void main(String[] args) {
 
+		Boolean menu = true;
 		TreeJogadores jogadores = new TreeJogadores();
 
 		jogadores.add(new Jogador("Toni Kroos", 33, 8, 1.83f, Position.valueOf(6)));
@@ -21,10 +22,49 @@ public class Laboratorio {
 		jogadores.add(new Jogador("De Arrascaeta", 29, 14, 1.74f, Position.valueOf(8)));
 		jogadores.add(new Jogador("Lionel Messi", 35, 10, 1.69f, Position.valueOf(9)));
 
-		jogadores.inOrder();
-		jogadores.preOrder();
-		jogadores.postOrder();
-	}
+		while (menu) {
 
+			System.out.println("--------------------------");
+			System.out.println("1 - IMPRIMIR IN ORDER");
+			System.out.println("2 - IMPRIMIR PRE ORDER");
+			System.out.println("3 - IMPRIMIR POST ORDER");
+			System.out.println("4 - BUSCAR JOGADOR");
+			System.out.println("5 - FECHAR PROGRAMA");
+			System.out.println("--------------------------");
+			Integer escolha;
+			escolha = scan.nextInt();
+			switch (escolha) {
+			case 1:
+				jogadores.inOrder();
+				break;
+			case 2:
+				jogadores.preOrder();
+				break;
+			case 3:
+				jogadores.postOrder();
+				break;
+			case 4:
+				System.out.println("Deseja buscar o jogador de qual posição?");
+				System.out.println("1 - Goleiro");
+				System.out.println("2 - Zagueiro Direito");
+				System.out.println("3 - Zagueiro Esquerdo");
+				System.out.println("4 - Lateral Direito");
+				System.out.println("5 - Lateral Esquerdo");
+				System.out.println("6 - Meia Central");
+				System.out.println("7 - Volante");
+				System.out.println("8 - Meia Atacante");
+				System.out.println("9 - Ponta Direita");
+				System.out.println("10 - Ponta Esquerda");
+				System.out.println("11 - Centroavante");
+				Integer choose;
+				choose = scan.nextInt();
+				System.out.println(jogadores.find(Position.valueOf(choose)));
+				break;
+			case 5:
+				menu = false;
+				break;
+			}
+		}
+	}
 
 }
