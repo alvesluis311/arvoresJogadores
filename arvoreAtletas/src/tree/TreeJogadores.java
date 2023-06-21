@@ -60,40 +60,6 @@ public class TreeJogadores {
 		}
 	}
 
-	public void delete(Jogador jogador) {
-		rootNode = deleteNode(jogador, rootNode);
-	}
-
-	private Node deleteNode(Jogador jogador, Node subRoot) {
-		if (subRoot == null) {
-			return null;
-		} else if (jogador.getPosition().ordinal() < subRoot.getJogador().getPosition().ordinal()) {
-			subRoot.setLeftNode(deleteNode(jogador, subRoot.getLeftNode()));
-		} else if (jogador.getPosition().ordinal() > subRoot.getJogador().getPosition().ordinal()) {
-			subRoot.setRightNode(deleteNode(jogador, subRoot.getRightNode()));
-		} else {
-			if (subRoot.getLeftNode() == null) {
-				return subRoot.getRightNode();
-			} else if (subRoot.getRightNode() == null) {
-				return subRoot.getLeftNode();
-			}
-
-			Node successor = findMinimumNode(subRoot.getRightNode());
-			subRoot.setJogador(successor.getJogador());
-			subRoot.setRightNode(deleteNode(successor.getJogador(), subRoot.getRightNode()));
-		}
-
-		return subRoot;
-	}
-
-	private Node findMinimumNode(Node node) {
-		Node current = node;
-		while (current.getLeftNode() != null) {
-			current = current.getLeftNode();
-		}
-		return current;
-	}
-
 	public void inOrder() {
 		System.out.println("IN ORDER:");
 		inOrder(rootNode);
