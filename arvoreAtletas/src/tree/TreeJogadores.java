@@ -102,8 +102,7 @@ public class TreeJogadores {
 	private void inOrder(Node subRoot) {
 		if (subRoot != null) {
 			inOrder(subRoot.getLeftNode());
-			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName()
-					+ " - " + subRoot.getJogador().getNumber() + ", " + subRoot.getJogador().getHeight() + " m");
+			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName());
 			inOrder(subRoot.getRightNode());
 		}
 	}
@@ -115,8 +114,7 @@ public class TreeJogadores {
 
 	private void preOrder(Node subRoot) {
 		if (subRoot != null) {
-			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName()
-					+ " - " + subRoot.getJogador().getNumber() + ", " + subRoot.getJogador().getHeight() + " m");
+			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName());
 			preOrder(subRoot.getLeftNode());
 			preOrder(subRoot.getRightNode());
 		}
@@ -131,8 +129,7 @@ public class TreeJogadores {
 		if (subRoot != null) {
 			postOrder(subRoot.getLeftNode());
 			postOrder(subRoot.getRightNode());
-			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName()
-					+ " - " + subRoot.getJogador().getNumber() + ", " + subRoot.getJogador().getHeight() + " m");
+			System.out.println(subRoot.getJogador().getPosition().getLabel() + ": " + subRoot.getJogador().getName());
 		}
 	}
 
