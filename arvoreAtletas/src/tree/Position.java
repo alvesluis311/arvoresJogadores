@@ -10,7 +10,7 @@ public enum Position {
 	MEIA_VOLANTE(7, "Meia Volante"), 
 	MEIA_ATACANTE(8, "Meia Atacante"), 
 	PONTA_DIR(9, "Ponta Direita"),
-	PONTA_ESQ(10, "Ponta Esquerxa"),
+	PONTA_ESQ(10, "Ponta Esquerda"),
 	CENTROAVANTE(11, "Centroavante");
 
 	int id;
