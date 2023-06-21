@@ -61,6 +61,7 @@ public class Laboratorio {
 				System.out.println(jogadores.find(Position.valueOf(choose)));
 				break;
 			case 5:
+				System.out.println("PROGRAMA ENCERRADO!!!");
 				menu = false;
 				break;
 			}
