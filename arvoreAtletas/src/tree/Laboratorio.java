@@ -31,9 +31,9 @@ public class Laboratorio {
 			System.out.println("4 - BUSCAR JOGADOR");
 			System.out.println("5 - FECHAR PROGRAMA");
 			System.out.println("--------------------------");
-			Integer escolha;
-			escolha = scan.nextInt();
-			switch (escolha) {
+			Integer chooseAction;
+			chooseAction = scan.nextInt();
+			switch (chooseAction) {
 			case 1:
 				jogadores.inOrder();
 				break;
@@ -56,9 +56,9 @@ public class Laboratorio {
 				System.out.println("9 - Ponta Direita");
 				System.out.println("10 - Ponta Esquerda");
 				System.out.println("11 - Centroavante");
-				Integer choose;
-				choose = scan.nextInt();
-				System.out.println(jogadores.find(Position.valueOf(choose)));
+				Integer choosePlayer;
+				choosePlayer = scan.nextInt();
+				System.out.println(jogadores.find(Position.valueOf(choosePlayer)));
 				break;
 			case 5:
 				System.out.println("PROGRAMA ENCERRADO!!!");
